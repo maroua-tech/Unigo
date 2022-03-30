@@ -402,6 +402,11 @@ th {
     font-size: 52px;
 }
 }
+@media (max-width: 544px) {
+ .landing .container  .images {
+    display: none;
+}
+}
 @media (max-width: 400px) {
    .landing .container .content h1 {
     font-size: 30px;
@@ -596,6 +601,11 @@ th {
  }
   .patients .container .image img {
     width: 108%;
+}
+}
+@media (max-width:767px) {
+  .patients .container .image img {
+    width: 100%;
 }
 }
 /* end patients register */
@@ -1230,6 +1240,15 @@ th {
 .subscribe .container input[type="submit"] {
 top: -1px;
 }
+}
+@media (max-width:474px){
+   .subscribe .container input[type="email"] {
+    right: 9px;
+  }
+.subscribe .container input[type="submit"] {
+    top: -45px;
+    right: -108px;
+  }
 }
 @media (max-width:400px){
   .subscribe .container input[type="email"] {
