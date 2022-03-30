@@ -840,8 +840,7 @@ th {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: -5px 5px 5px #eae7e7, 5px 5px 5px #eae7e7, -5px -5px 5px #eae7e7,
-    5px -5px 5px #eae7e7;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -1079,9 +1078,7 @@ th {
 .news .container .articles .article {
   width: 30%;
   padding: 20px;
-  box-shadow: -5px 5px 10px rgb(207, 205, 205, 0.5),
-    5px 5px 3px rgb(207, 205, 205, 0.5), 5px -5px 3px rgb(207, 205, 205, 0.5),
-    -5px -5px 3px rgb(207, 205, 205, 0.5);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
