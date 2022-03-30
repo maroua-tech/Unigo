@@ -143,6 +143,7 @@ header .container nav ul.open {
   }
   header .container .toggle-menu::after {
     content: '';
+    display: none;
     position: absolute;
     width: 16px;
     border: 10px solid;
