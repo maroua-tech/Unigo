@@ -787,7 +787,7 @@ th {
 }
 /* @media (max-width:400px) {
   .appointments .container::after {
-    /* top: 49px; */
+    top: 49px;
     width: 100%;
     height: 200px;
 }
