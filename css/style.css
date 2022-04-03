@@ -275,6 +275,10 @@ header .container nav.open {
      transform: translateX(-50%);
      left: 50%;
      width: 100%;
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
 }
 .landing .container .images .doctor {
   background-color: white;
@@ -428,11 +432,24 @@ th {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
 }
 @media (max-width: 767px) {
  .landing .container > .content h1 {
     font-size: 52px;
+}
+}
+@media (max-width: 576px) {
+ .landing {
+   padding: 100px 11px;
+}
+ .landing .container{
+   margin-left: 5px;
+   margin-right: 5px;
 }
 }
 @media (max-width: 544px) {
