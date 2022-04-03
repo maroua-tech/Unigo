@@ -632,6 +632,12 @@ th {
 .patients .container .image .doctor {
   position: absolute;
 }
+@media (max-width:991px) {
+  .patients .container .image img {
+    width: 95%;
+    height: 100%;
+  }
+}
 @media (max-width:767px) {
  .patients .container {
    flex-direction: column;
@@ -721,22 +727,13 @@ th {
   color: white;
   background-color: var(--main-color);
 }
-@media (max-width:400px) {
-  .appointments .container::after {
-    top: 49px;
-    width: 100%;
-    height: 200px;
+@media (max-width:1199px) {
+.appointments .container .image {
+  margin-right: 40px;
 }
+.appointments .container .content p {
+  margin-bottom: 15px;
 }
-@media (max-width:525px) {
-  .appointments .container::after {
-   top: 50px;
- } 
-}
-@media (max-width:767px) {
-  .appointments .container .image img {
-   width: 100%;
- } 
 }
 @media (max-width:991px) {
  .appointments .container {
@@ -760,14 +757,24 @@ th {
    margin-bottom: 70px;
  } 
 }
-@media (max-width:1199px) {
-.appointments .container .image {
-  margin-right: 40px;
+@media (max-width:767px) {
+  .appointments .container .image img {
+   width: 95%;
+ } 
 }
-.appointments .container .content p {
-  margin-bottom: 15px;
+@media (max-width:525px) {
+  .appointments .container::after {
+   display: none;
+
+ } 
 }
+/* @media (max-width:400px) {
+  .appointments .container::after {
+    /* top: 49px; */
+    width: 100%;
+    height: 200px;
 }
+} */
 /* end appointments */
 /* start How it works */
 .works {
