@@ -342,8 +342,10 @@ color: white;
 }
 }
 @media (max-width:576px) {
-  section .signin form,
   section .signup form {
+    margin-top: -13px;
+  }
+  section .signin form {
       margin-top: 20px;
 }
 }
