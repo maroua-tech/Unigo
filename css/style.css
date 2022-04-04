@@ -2,6 +2,7 @@
 :root {
   --main-color: #2fc685;
   --second-color: #f0f9f4;
+  --theme-color: #a5c7af ;
   /* --font-color: #49b07b #dff3ea #46bd83 #eef7f2 #f0f9f4 #a2c7b6 #828884 #2fc685
     #a5c7af #fe744d #bbbbbb #0c110d #fffbfc #fbcfd0 #feefd0 #d5f1e2; */
   --text-color: #828884;
@@ -36,6 +37,314 @@ button {
   position: relative;
 }
 /* end global rules */
+/* start Popup */
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 2;
+  display: flex;
+}
+.toggle-container .toggle {
+  width: 142px;
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--theme-color);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.toggle-container.active .toggle {
+  border: 1px solid white;
+}
+.toggle-container .toggle > div {
+  width: 50%;
+  margin: 0;
+  height: 100%;
+  color: var(--theme-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.toggle-container.active .toggle > div{
+  color: white;
+}
+.toggle-container .toggle > div:first-of-type {
+  border-right: 1px solid var(--theme-color);
+}
+.toggle-container.active .toggle > div:first-of-type {
+  border-right: 1px solid white;
+}
+.toggle-container .toggle > div.active,
+.toggle-container .toggle > div:hover {
+background-color: var(--theme-color);
+color: white;
+}
+.toggle-container.active .toggle > div.active,
+.toggle-container.active .toggle > div:hover {
+background-color: white;
+color: var(--theme-color);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16 34 27/ 80%);
+    z-index: 9999;
+    display: none;
+}
+.close {
+    position: absolute;
+    top: -68px;
+    right: -29px;
+    text-align: center;
+    display: none;
+    z-index: 19999;
+    font-size: 67px;
+    font-weight: bolder;
+    color: var(--theme-color);
+    cursor: pointer;
+}
+section {
+    display: none;
+    position: fixed;
+    margin: 0 auto;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20000;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+section .signin,
+section .signup {
+     width: 50%;
+     height: 85vh;
+     position: absolute;
+     display: none;
+     text-align: center;
+     background-color: white;
+     padding: 42px;
+     transition: .3s;
+     -webkit-transition: .3s;
+     -moz-transition: .3s;
+     -ms-transition: .3s;
+     -o-transition: .3s;
+}
+section .signin {
+ right: 0%;
+ background-color: #ffffff;
+}
+section .signup {
+ left: 0%;
+}
+section .image {
+    width: 50%;
+    height: 85vh;
+}
+section .image {
+    position: relative;
+    background-color: var(--theme-color);
+    
+}
+section .image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+section .image.right {
+    right: -50%;
+}
+section .signin.active {
+ right: 0;
+}
+section .signup.active {
+    left: 0%;
+}
+section .signin.active, 
+section .signup.active {
+  display: block;
+}
+.signin h1,
+.signup h1 {
+ color: var(--theme-color);
+ text-transform: uppercase;
+}
+.signin h1 {
+  margin: 20px 0;
+}
+section .signin form,
+section .signup form {
+display: flex;
+flex-direction: column;
+margin-top: 40px;
+align-items: center;
+}
+section .signup form {
+  margin-top: 8px;
+}
+section .signin form input,
+section .signup form input { 
+  width: 80%; 
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid var(--theme-color);
+  margin-bottom: 20px;
+  position: relative;
+  height: 50px;
+  padding: 10px 5px 3px;
+  /* padding-bottom: 5px; */
+}
+section .signup form input[type="checkbox"] {
+    width: 25%;
+    align-self: flex-start;
+    height: 20px;
+}
+section .signup form input[type="checkbox"]:checked {
+  background-color: var(--theme-color);
+  color: white;
+}
+input:focus {
+  outline: none;
+}
+/* input::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20%;
+  color: var(--theme-color);
+  font-size: 16px;
+  width: 20%;
+  height: 50%;
+} */
+section div .socials {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+section div .socials > div {
+  margin-left: 8px;
+  display: flex;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 20px;
+  border: 1px solid var(--theme-color);
+  color: var(--theme-color);
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+section div .socials > div:hover {
+  background-color: var(--theme-color);
+  color: white;
+}
+section div > p:first-of-type {
+  color: var(--text-color);
+}
+section p {
+  margin-top: 20px;
+  color: black;
+}
+section .signin button {
+  margin-top: 20px;
+}
+section button {
+  margin-top: 4px;
+  border: none;
+  width: 140px;
+  text-transform: uppercase;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/* @media (min-height:991px) {
+  section .signin,
+  section .signup {
+    height: 60vh;
+  }
+  section .image {
+    height: 60vh;
+  }
+} */
+@media (max-width:991px) {
+  section .signin,
+  section .signup {
+    padding: 100px 0;
+  }
+}
+/* @media (max-height:700px) {
+  section .signin h1,
+  section .signup h1 {
+    margin: 0.07em 0;
+    margin-top: -0.9em;
+  }
+} */
+@media (max-width:767px) {
+ 
+ .toggle-container.active .toggle {
+  border: 1px solid var(--theme-color);
+}
+.toggle-container.active .toggle > div{
+  color: var(--theme-color);
+}
+.toggle-container.active .toggle > div:first-of-type {
+  border-right: 1px solid var(--theme-color);
+}
+.toggle-container.active .toggle > div.active,
+.toggle-container.active .toggle > div:hover {
+background-color: var(--theme-color);
+color: white;
+}
+
+  section .image {
+    display: none;
+  }
+  section .signin,
+  section .signup {
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+}
+/* end Popup */
 /* start header */
 header {
   position: absolute;
@@ -785,13 +1094,6 @@ th {
 
  } 
 }
-/* @media (max-width:400px) {
-  .appointments .container::after {
-    top: 49px;
-    width: 100%;
-    height: 200px;
-}
-} */
 /* end appointments */
 /* start How it works */
 .works {
