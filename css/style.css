@@ -302,16 +302,14 @@ section button {
 @media (max-width:991px) {
   section .signin,
   section .signup {
-    padding: 100px 0;
+    padding: 70px 0;
   }
-}
-/* @media (max-height:700px) {
   section .signin h1,
   section .signup h1 {
-    margin: 0.07em 0;
-    margin-top: -0.9em;
+    margin: 0;
   }
-} */
+}
+
 @media (max-width:767px) {
  
  .toggle-container.active .toggle {
@@ -1329,7 +1327,7 @@ th {
   background-color: #d4ecde;
   /* margin-right: 50px; */
   width: 90%;
-  height: 290px;
+  height: 350px;
 }
 .testimonials .container .slider .patients .quote {
   position: absolute;
@@ -1338,7 +1336,7 @@ th {
 }
 .testimonials .container .slider .patients .quote {
   color: var(--main-color);
-  font-size: 25px;
+  font-size: 40px;
 }
 .testimonials .container .slider .patients .quote i {
   opacity: 1;
@@ -1448,9 +1446,6 @@ th {
   .testimonials .container .slider .patients .patient {
     width: 70%;
   }
-  /* .testimonials .container .slider .patients .patient.patient.right.active {
-    display: none;
-  } */
   .testimonials .container .slider .patients .patient.right.active,
   .testimonials .container .slider .patients .patient.left.active {
   left: 50%;
@@ -1460,6 +1455,16 @@ th {
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
+}
+}
+@media (max-width:400px) {
+.testimonials .container .slider .patients .patient {
+  width: 90%;
+}
+}
+@media (max-width:300px) {
+.testimonials .container .slider .patients {
+  width: 100%;
 }
 }
 /* end testimonials */
@@ -1567,9 +1572,6 @@ th {
   }
 }
 @media (max-width: 1189px) and (min-width:768px) {
-  /* .news .container .articles .article:last-of-type {
-    font-size: 28px;
-  } */
  .news .container .articles .article:last-of-type h4 {
   margin-bottom: 46px;
  } 
@@ -1656,8 +1658,15 @@ top: -1px;
     top: -44px;
     right: -99px;
 }
-.testimonials .container .slider .patients .patient {
-  width: 90%;
+}
+@media (max-width:300px){
+  .subscribe .container input[type="email"] {
+    right: 0px;
+    width: 95%;
+}
+.subscribe .container input[type="submit"] {
+    top: 24px;
+    right: -6px;
 }
 }
 /* end subscribe */
